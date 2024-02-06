@@ -1,6 +1,6 @@
 package ebac_Mod10;
 
-import java.util.Scanner;
+import java.util.*;
 
 public class loop_for {
 
