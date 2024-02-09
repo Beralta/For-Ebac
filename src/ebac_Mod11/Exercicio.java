@@ -1,32 +1,36 @@
 package ebac_Mod11;
-import java.util.*;
+import java.util.Scanner;
+import java.util.Arrays;
 
 
 public class Exercicio {
 
 
+        public static void main(String[] args) {
+
+            Scanner scanner = new Scanner(System.in);
 
 
-    public static void main(String[] args) {
+            System.out.print("Digite o nome das pessoas separados por vírgula: ");
+            String entrada = scanner.nextLine();
 
-        Scanner s = new Scanner(System.in);
+            String[] nomes = entrada.split(",");
 
-        int num = s.nextInt();
+            for (int i = 0; i < nomes.length; i++) {
+                nomes[i] = nomes[i].trim();
+            }
 
-
-        String[] nomes = new String[num];
-
-
-        for(int i=0; i <= num; i++) {
-
+            Arrays.sort(nomes);
 
 
-            Scanner n = new Scanner(System.in);
-            String inpt = n.nextLine();
+            System.out.println("Nomes em ordem alfabética:");
+            System.out.println(String.join(", ", nomes));
 
-            nomes[i] = inpt;
+
+
 
         }
+
     }
 
 
@@ -36,4 +40,4 @@ public class Exercicio {
 
 
 
-}
+
