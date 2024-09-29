@@ -8,4 +8,5 @@ import java.lang.annotation.*;
 public @interface PrimeiraAnnotation {
     String value();
     String[] bairros();
+    int[] numbers();
 }
