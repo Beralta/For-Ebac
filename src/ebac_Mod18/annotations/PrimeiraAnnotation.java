@@ -9,4 +9,5 @@ public @interface PrimeiraAnnotation {
     String value();
     String[] bairros();
     int[] numbers();
+    String nomes();
 }
