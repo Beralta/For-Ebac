@@ -10,4 +10,5 @@ public @interface PrimeiraAnnotation {
     String[] bairros();
     int[] numbers();
     String nomes();
+    String email();
 }
