@@ -4,7 +4,8 @@ import java.util.Locale;
 
 public class ExemplosExceptions {
     public static void main(String[] args) {
-        lancarExceptions();
+        //lancarExceptions();
+        lancarExceptionsFinally();
     }
 
     private static void lancarExceptions() {
@@ -17,5 +18,23 @@ public class ExemplosExceptions {
         catch (Exception e) {
             throw new RuntimeException("Não existe palavras para se tornarem maiúsculas!");
         }
+    }
+
+    private static void lancarExceptionsFinally() {
+        String palavra2 = null;
+        String novaPalavra2 = null;
+        try {
+            palavra2 = novaPalavra2.toUpperCase();
+        }
+        catch (NullPointerException e) {
+            System.out.println("Não existe palavras para se tornarem maiúsculas!");
+            palavra2 = "Primeira";
+        }
+        finally {
+
+            novaPalavra2 = palavra2.toUpperCase();
+        }
+        System.out.println("Palavra antiga " + palavra2);
+        System.out.println("Nova Palavra " + novaPalavra2);
     }
 }
