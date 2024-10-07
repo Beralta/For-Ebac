@@ -5,7 +5,8 @@ import java.util.Locale;
 public class ExemplosExceptions {
     public static void main(String[] args) {
         //lancarExceptions();
-        lancarExceptionsFinally();
+        //lancarExceptionsFinally();
+        lancarNovaExcepitions();
     }
 
     private static void lancarExceptions() {
@@ -36,5 +37,23 @@ public class ExemplosExceptions {
         }
         System.out.println("Palavra antiga " + palavra2);
         System.out.println("Nova Palavra " + novaPalavra2);
+    }
+
+    private static void lancarNovaExcepitions() {
+        int number = 0;
+        String name = "Pedro";
+
+        try {
+            number = 10;
+        }
+        catch (NullPointerException e) {
+            System.out.println("Tem parada errada aqui mano!");
+        }
+        finally {
+            System.out.println("Passou");
+        }
+
+
+
     }
 }
